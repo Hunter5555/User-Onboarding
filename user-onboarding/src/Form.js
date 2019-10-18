@@ -8,10 +8,10 @@ const StyledForm = styled.div`
  display: flex;
  flex-direction: column;
  align-items: center;
- background-color: grey;
+ background-color: darkgreen;
 `;
 const StyledEntry = styled.label`
-    color: orange;
+    color: white;
 `;
 const StyledResults = styled.div`
 display: flex;
@@ -36,18 +36,18 @@ const NewUser = ({ values, errors, touched, status }) => {
             <Form class='FormMASTER'>
                 <StyledForm class='Form'>
                     <div>
-                        <StyledEntry>Enter Name<Field type="text" name="name" placeholder="Name" /></StyledEntry>
+                        <StyledEntry>Name<Field type="text" name="name" placeholder="Name" /></StyledEntry>
                         {touched.name && errors.name && (<p className="error">{errors.name}</p>)}
                     </div>
                     <div>
-                        <StyledEntry>Enter Email<Field type="email" name="email" placeholder="Email" /></StyledEntry>
+                        <StyledEntry>Email<Field type="email" name="email" placeholder="Email" /></StyledEntry>
                         {touched.email && errors.email && (<p className="error">{errors.email}</p>)}
                     </div>
                     <div>
-                        <StyledEntry>Enter Password<Field type="password" name="password" placeholder="●●●●●●●●" /></StyledEntry>
+                        <StyledEntry>Password<Field type="password" name="password" placeholder="●●●●●●●●" /></StyledEntry>
                         {touched.password && errors.password && (<p className="error">{errors.password}</p>)}
                     </div>
-                    <StyledEntry>Agree to Terms of Services: <Field type="checkbox" name="terms" checked={values.terms} /></StyledEntry>
+                    <StyledEntry>I have read and agree to Terms of Services: <Field type="checkbox" name="terms" checked={values.terms} /></StyledEntry>
                     {touched.terms && errors.terms && (<p className="error">{errors.terms}</p>)}
                     <button>Submit</button>
                 </StyledForm>
